@@ -1,0 +1,105 @@
+\usepackage[spanish, mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{typearea}
+
+ \usepackage[svgnames,x11names]{xcolor}
+
+
+\usepackage{xspace}
+
+%\usepackage{pifont}
+
+%\usepackage{framed}
+%\usepackage{wrapfig}
+%\usepackage{enumerate}
+%\usepackage{caption}
+%\usepackage[spanish]{minitoc}  %Mini table of contents at the beginning of section/chapter
+%\usepackage{mwe}  %Minimal working example
+
+\usepackage[markcase=ignoreuppercase,headsepline,footsepline,plainfootsepline]{scrlayer-scrpage}
+%\usepackage{hyperref}
+%\hypersetup{pdfborder={0 0 0}}
+\usepackage{bookman}
+
+%\usepackage{capt-of}
+%\usepackage{multicol}
+%\usepackage[stable]{footmisc} %para footnote dentro de pma
+%\usepackage{graphicx}
+%\usepackage{setspace}
+%\singlespacing
+%\onehalfspacing
+
+ %\usepackage{pgfplots}
+ %\pgfplotsset{compat=1.15}
+ %\addto\shorthandsspanish{\spanishdeactivate{>}}
+
+\usepackage{tikz}
+%\usetikzlibrary{calc,intersections,shapes.arrows,patterns}
+
+%\usepackage{filecontents}
+% %\usetikzlibrary{decorations.pathmorphing}
+% \usetikzlibrary{shapes.geometric}
+% \usetikzlibrary{calc}
+% %\usetikzlibrary{arrows,snakes,shapes.geometric}
+% 
+% \usetikzlibrary{calc}
+% \addto\shorthandsspanish{\spanishdeactivate{>}}
+%\deactivatetilden
+
+%\usepackage{mathtools}
+%\usepackage{csquotes}
+%\usepackage{hyperref}
+
+%\usepackage{chngcntr}
+%\usepackage{etoolbox}
+%\usepackage{subfigure}
+
+%
+	\usepackage[backend=biber,
+	    bibencoding=utf8,
+	%    refsegment=chapter,
+	    style=authoryear-ibid,
+	    isbn=true,
+	    doi=true,
+	    url=false,
+	    language=autobib,
+	    clearlang=true,
+	    firstinits=true,
+	    defernumbers=true,
+	    maxbibnames=5,
+	    maxcitenames=2,minnames=1%,maxalphanames=4,minalphanames=3
+	]{biblatex}
+%	\DefineBibliographyStrings{spanish}{andothers={\textit{et~al\adddot}}}
+%	\defbibheading{subbibliography}{%
+%	                                 \section*{%
+%	                                           Referencias y bibliografía
+%	                                          }%                    
+%	\addcontentsline{toc}{section}{Referencias y bibliografía}%
+%	                               }
+%	\newcounter{nAppendix}
+%	\newcommand{\hAppendixSection}{\section*{Apéndices}{\addcontentsline{toc}{section}{\rmfamily Apéndices}}\setcounter{nAppendix}{0}}
+%	\newcommand{\hBibliography}{\section*{Bibliografía y referencias}{\addcontentsline{toc}{section}{Bibliografía y referencias}}}
+%	\newcommand{\hAppendix}[3]{\addtocounter{nAppendix}{1}%
+%	                           \subsection*{{\thechapter}A.\Roman{nAppendix}. {#1}}%
+%				    \label{a:#3}
+%				    \addcontentsline{toc}{subsection}{{\thechapter}A.\Roman{nAppendix}. {#2}}}
+%	\usepackage[mathlines,displaymath]{lineno}
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+%	  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+%	  \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+%	  \renewenvironment{#1}%
+%	     {\linenomath\csname old#1\endcsname}%
+%	     {\csname oldend#1\endcsname\endlinenomath}}% 
+%	\newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+%	  \patchAmsMathEnvironmentForLineno{#1}%
+%	  \patchAmsMathEnvironmentForLineno{#1*}}%
+%	\AtBeginDocument{%
+%	\patchBothAmsMathEnvironmentsForLineno{equation}%
+%	\patchBothAmsMathEnvironmentsForLineno{align}%
+%	\patchBothAmsMathEnvironmentsForLineno{flalign}%
+%	\patchBothAmsMathEnvironmentsForLineno{alignat}%
+%	\patchBothAmsMathEnvironmentsForLineno{gather}%
+%	\patchBothAmsMathEnvironmentsForLineno{multline}%
+%	}

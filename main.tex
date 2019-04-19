@@ -1,0 +1,100 @@
+%//& -job-name=libro
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   CAMBIAR -JOB-NAME PARA COMPLILAR
+%                                   Y QUE SALGA CON NOMBRE PROPIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%!TeX root=/main.tex
+\documentclass[BCOR= 3mm,
+DIV                = 12,
+%twoside=false
+twoside            = true,
+paper              = a4,
+footnotes          = multiple,
+toc                = bibliography
+]{scrbook}
+%% DEBUGGING
+%\usepackage{showlabels} For debugging
+%\usepackage{showkeys}
+%%%%%%%%%%%%%%
+
+%%  IMPORTS
+\input{./init/packagebook.tex} %paquetes que se utilizan en este documento
+\input{./macros/fluidmechanics.tex} %macros utilizados en este documento
+%%%%%%%%%%%%%%
+
+
+\renewcommand*{\chapterformat}{%
+    \mbox{\scalebox{0.80}{\chapappifchapterprefix{\nobreakspace}}%
+    \scalebox{3.5}{\color{DeepSkyBlue2}\thechapter}\enskip}}
+\setkomafont{pageheadfoot}{%
+			    \normalfont\color{DeepSkyBlue4}\itshape\small
+}
+
+\setkomafont{pagenumber}{\normalfont\bfseries}
+
+\deffootnote[1.5em]{1.5em}{0mm}{\textsuperscript{\normalfont\thefootnotemark}}
+ 
+
+\newcommand{\chapterDir}{./subtex}
+
+% \newcommand{\tikzDir}  {./tikz}
+% \newcommand{\FigureDir}{./figuras}
+% \newcommand{\BiblioDir}{./biblio}
+
+% \renewcommand{\mtcfont}{\footnotesize\rmfamily}
+% \renewcommand{\mtcSfont}{\footnotesize\bfseries} 
+% \setlength{\parskip}{0.5\baselineskip plus 1pt}
+
+
+%\captionsetup[figure]{font={sf,md,sl,small},labelfont={sf,md,sl,small}}
+% \setcapwidth[c]{.8\textwidth}
+\setcapindent{0pt}
+
+\setkomafont{caption}{\footnotesize\itshape}
+
+\setkomafont{captionlabel}{\centering \usekomafont{caption}}
+
+ \ihead{Termodinámica}
+ \ofoot[\pagemark]{\pagemark}% Optional argument controls chapter-starting pages
+ \ifoot[2019 1C \headmark]{\headmark}
+
+
+
+% \dominitoc 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                               BIBLIOGRAFIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \input{\BiblioDir/biblio.tex}
+% \addbibresource[label=intro]{\jobname1.bib}
+% \addbibresource[label=AD]{\jobname4.bib}
+% \addbibresource[label=EFL]{\jobname5.bib}
+% \addbibresource{\BiblioDir/biblio.bib}
+
+
+
+
+
+  
+\begin{document}
+
+% \frontmatter
+%\maketitle
+
+%\tableofcontents               
+
+
+\input{\chapterDir/chapter}
+\mainmatter
+
+\pagestyle{scrheadings}
+
+\pagenumbering{arabic}
+% \linenumbers 
+
+
+\end{document}
+
+

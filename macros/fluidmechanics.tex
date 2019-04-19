@@ -1,0 +1,95 @@
+\usepackage{mathrsfs,amssymb,amsmath}
+
+\newcommand{\hDmat}[1]{\ensuremath{\frac{D#1}{Dt}}}
+\newcommand{\hdlocal}[2]{  \ensuremath{             \frac{d}{dt} \int \limits_{#2}\rho #1 \, d \mathscr{V}           }}
+\newcommand{\hflujo}[2] {  \ensuremath{             \int \limits_{#2}\rho #1\, v_k n_k\,d\mathscr{S}                 }}
+
+\newcommand{\reducespace}{\setlength{\itemsep}{0pt}%
+                  \setlength{\parskip}{2pt}%
+                 }
+
+
+
+\newcommand{\hdlin}{\,d\ell}
+\newcommand{\hsij}{\ensuremath{\sigma_{ij}}\xspace}
+\newcommand{\hdij}{\ensuremath{\delta_{ij}}\xspace}
+\newcommand{\hd}[2]{\ensuremath{\delta_{#1#2}}\xspace}
+\newcommand{\htij}{\ensuremath{\tau_{ij}}\xspace}
+\newcommand{\hSij}{\ensuremath{S_{ij}}\xspace}
+\newcommand{\heij}{\ensuremath{e_{kl}}\xspace}
+\newcommand{\haij}{\ensuremath{\xi_{kl}}\xspace}
+\newcommand{\hkij}{\ensuremath{k_{ij}}\xspace}
+\newcommand{\Aijkl}{\ensuremath{A_{ijkl}}\xspace}
+\newcommand{\hlcv}[1]{\ensuremath{\epsilon_{#1}}\xspace}
+\newcommand{\dMKS}[3]{\ensuremath{\text{L}^{#1}\text{M}^{#2}\text{T}^{#3}}} 
+\newcommand{\dTEC}[3]{\ensuremath{\text{L}^{#1}\text{F}^{#2}\text{T}^{#3}}} 
+\newcommand{\dimequiv}{\ensuremath{\stackrel{\circ }{=}}}
+\newcommand{\lap}[1]{\ensuremath{\nabla ^2 #1}}
+\newcommand{\tensor}[1]{\ensuremath{\overline{\overline{#1}}}}
+\newcommand{\hfm}{\phantom{-}}
+\newcommand{\hpartial}[2]{ \ensuremath{            \frac{\partial #1}{\partial #2}    } }
+\newcommand{\hdpartial}[2]{ \ensuremath{            \frac{\partial^2 #1}{\partial #2^2}    } }
+\newcommand{\hdiv}[1]    { \ensuremath{            \text{div}\,\vec{#1}               } }
+\newcommand{\hrot}[1]    { \ensuremath{            \text{rot}\,\vec{#1}               } }
+\newcommand{\hgrad}[1]   { \ensuremath{            \text{grad}\,{#1}                  } }
+\newcommand{\gC}{~\ensuremath{^\circ}C}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           Numeros adimensionales 
+
+\newcommand{\hRe}{\ensuremath{\mathscr R\!e}\xspace} %Reynolds
+\newcommand{\hFr}{\ensuremath{\mathscr F\!r}\xspace} %Froude
+\newcommand{\hMa}{\ensuremath{\mathscr M\!a}\xspace} %mach
+\newcommand{\hEu}{\ensuremath{\mathscr E\!u }\xspace} %Euler
+\newcommand{\hWe}{\ensuremath{\mathscr W\!e}\xspace}  %Weber
+\newcommand{\hpi}{\ensuremath{\Pi}\xspace}            
+\newcommand{\hKn}{\ensuremath{\mathscr K\!n }\xspace} %Knudsen
+\newcommand{\hBo}{\ensuremath{\mathscr B\!o}\xspace}  %Bom
+\newcommand{\hPr}{\ensuremath{\mathscr P\!r}\xspace}  %Prandlt
+\newcommand{\hEc}{\ensuremath{\mathscr E\!c}\xspace}  %Ecquer
+\newcommand{\hPs}{\ensuremath{\mathscr P\!o}\xspace}  %Poiseuille
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hpm}{\phantom{-}}
+\newcommand{\xQ}{\ensuremath{\mathscr Q}\xspace}
+\newcommand{\hQ}{\ensuremath{\dot{\!Q}}\xspace}
+\newcommand{\hW}{\ensuremath{\dot{W}_M}\xspace}
+\newcommand{\hQk}{\ensuremath{\dot{Q}_k}\xspace}
+\newcommand{\hQG}{\ensuremath{\dot{Q}_G}\xspace}
+\newcommand{\hqG}{\ensuremath{\dot{q}_G}\xspace}
+\newcommand{\hET}{\ensuremath{{e}_T}\xspace}
+
+\newcommand{\citet}[2][]{\citeauthor{#2} (\citeyear[#1]{#2})}
+\newcommand{\citep}[2][]{(\citeauthor{#2}, \citeyear[#1]{#2})}
+\newcommand{\hscale}{0.8}
+
+\makeatletter
+\def\@getref#1.#2{#2}
+\newcommand{\getref}[1]{%
+  \begingroup
+  \edef\x{\endgroup\noexpand\@getref\getrefnumber{#1}}\x}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           Entornos para problemas y soluciones
+% \newtheorem{Prob}{Problema \rm}[section]
+% 
+% \newcommand{\pma}[1]{\begin{Prob}%
+%                   \rm{#1}%
+%                  \end{Prob}}
+% 
+% \newenvironment{leftbar2}{%
+%   \def\FrameCommand{\vrule width .3pt \hspace{10pt}}%
+%   \MakeFramed {\advance\hsize-\width \FrameRestore}}%
+%  {\endMakeFramed}
+% 
+% \newtheorem{Ejemplo}{{\LARGE \ding{43}} Problema \rm}[section]
+% 
+% 
+% 
+% \newenvironment{hejm}{\begin{Ejemplo}\rm}{\end{Ejemplo}}
+% 
+% \newenvironment{hscn}{\begin{leftbar2}\begin{proof}[{\LARGE \ding{45}} Soluci\'on]} {\end{proof}\end{leftbar2}}
+% 
+% 
+% \newcommand{\hcaja}[1]{\begin{center}
+% {\color{DeepSkyBlue4} \fbox{\parbox{0.9\textwidth}{\textit {#1}}}\par} 
+% \end{center}}
