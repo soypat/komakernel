@@ -1,0 +1,2 @@
+# komakernel
+komascript
